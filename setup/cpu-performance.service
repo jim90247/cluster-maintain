@@ -1,0 +1,11 @@
+[Unit]
+Description=Set CPU freq governor to performance
+
+[Service]
+Type=simple
+ExecStart=cpupower frequency-set -g performance
+User=root
+WorkingDirectory=/
+
+[Install]
+WantedBy=multi-user.target
