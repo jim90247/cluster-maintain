@@ -1,0 +1,17 @@
+[Unit]
+Description=Set InfiniBand ports' IPoIB transport modes and MTU
+Documentation=file:/etc/ipoibmodemtu.conf
+RefuseManualStop=true
+DefaultDependencies=false
+Conflicts=emergency.target emergency.service
+Requires=rdma.service
+Before=remote-fs-pre.target
+After=network.target rdma.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/ipoibmodemtu
+
+[Install]
+WantedBy=sysinit.target
