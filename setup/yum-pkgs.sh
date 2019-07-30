@@ -1,5 +1,7 @@
 #!/bin/bash
 pkgs=(
+	htop
+	tree
 	kernel-devel-3.10.0-957.el7.x86_64
 	aria2
 	ntp
@@ -47,5 +49,5 @@ yum install https://centos7.iuscommunity.org/ius-release.rpm -y
 yum groupinstall development -y
 yum groupinstall 'Server with GUI' -y --skip-broken
 #rpm -e --nodeps git-1.8.3.1-20.el7.x86_64
-yum remove git -y
+yum remove git -y # use newer git in ius
 yum install ${pkgs[@]} -y
