@@ -42,6 +42,7 @@ pkgs=(
 	python36u-libs
 	python36u-devel
 	python36u-pip
+	dkms
 	# dependency of minos
 	rpm-build
 	meson
