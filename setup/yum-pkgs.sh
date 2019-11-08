@@ -42,6 +42,11 @@ pkgs=(
 	python36u-libs
 	python36u-devel
 	python36u-pip
+	# dependency of minos
+	rpm-build
+	meson
+	glib2-devel
+	zeromq-devel
 )
 
 yum install epel-release -y
