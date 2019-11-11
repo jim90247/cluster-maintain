@@ -23,6 +23,7 @@ pkgs=(
 	tcl
 	tcl-devel
 	tk
+	lsof
 	perl-XML-LibXML
 	perl-Switch
 	p7zip
