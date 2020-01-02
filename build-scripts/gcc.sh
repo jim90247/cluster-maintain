@@ -24,7 +24,7 @@ fi
 
 mkdir build && cd build
 echo ">>> Configure <<<"
-../configure --prefix=$prefix > $script_dir/config.log.$version 2>&1
+../configure --prefix=$prefix --disable-multilib > $script_dir/config.log.$version 2>&1
 echo ">>> Build <<<"
 make -j > $script_dir/make.log.$version 2>&1
 echo ">>> Install <<<"
